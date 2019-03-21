@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="Portfolio">
+    <meta name="author" content="Austin Evans">
+
+    <!-- Bootstrap Core CSS -->
+    {% load static %}
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" rel="stylesheet" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+
+    <!-- Custom CSS -->
+    {% load static %}
+    <link href="{% static 'css/primary.css' %}" rel="stylesheet">
+
+    <title>{% block title %}Austin's' Portfolio{% endblock%}</title>
+  </head>
+  <body>
+    {% block content %}
+    <p>This page has no content.</p>
+    {% endblock %}
+  </body>
+</html>
