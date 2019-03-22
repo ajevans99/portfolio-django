@@ -1,3 +1,16 @@
 body {
   font-family: 'Source Sans Pro';
 }
+
+.bg-dark {
+  background-color: #000000 !important;
+}
+
+a.navbar-brand {
+  font-weight: bold;
+}
+
+.content-section {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
