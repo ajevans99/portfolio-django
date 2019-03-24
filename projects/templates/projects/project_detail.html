@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %}{{ project.name }} Project{% endblock %}
+
+{% block content %}
+<section class="content-section">
+  <div class="container">
+    <h1>{{ project.name }}</h1>
+    {% if project.video_link != null %}
+      <div class="embed-responsive embed-responsive-16by9 col-md-6 text-center">
+        <iframe class="embed-responsive-item" src="{{ project.video_link }}" frameborder="0" allow="encrypted-media" allowfullscreen></iframe>
+      </div>
+      <br>
+    {% endif %}
+    {{ project.formatted_markdown|safe }}  
+  </div>
+</section>
+{% endblock %}
