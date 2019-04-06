@@ -23,7 +23,6 @@
               </div>
               {% if project.tags.all.count > 0 %}
               <div class="card-text tag-section">
-                <h6 class="tag" >Tags: </h6>
                 {% for tag in project.tags.all %}
                   <div class="tag" style="background-color: #{{ tag.color }}">
                     <p class="card-text">{{ tag.name }}</p>
