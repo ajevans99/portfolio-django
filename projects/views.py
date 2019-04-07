@@ -10,6 +10,7 @@ from django.views import generic
 class ProjectsListView(generic.ListView):
     model = Project
     paginate_by = 10
+    ordering = ['-date']
 
 class ProjectDetailView(generic.DetailView):
     model = Project

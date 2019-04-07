@@ -1,9 +1,9 @@
 $(document).ready(function() {
     $( ".card" ).hover(
         function() {
-          $(this).addClass('shadow-lg'); 
+          $(this).addClass('shadow'); 
         }, function() {
-          $(this).removeClass('shadow-lg');
+          $(this).removeClass('shadow');
         }
     );
 });

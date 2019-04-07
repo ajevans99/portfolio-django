@@ -6,14 +6,20 @@
         <h1>Projects</h1>
         {% if project_list %}
           {% for project in project_list %}
-            <div class="card bg-light mb-3 project-card">
+            <div class="card bg-light mb-3 project-card" style="cursor: pointer;" onclick="window.location='{{ project.get_absolute_url }}';">
               <div class="row text-center no-gutters">
                 <div class="col-md-8">
                   <div class="card-body">
                     <h3 class="card-title">{{ project.name }}</h3>
                     <p class="card-text">{{ project.formatted_preview_markdown|safe }}</p>
-                    <a href="{{ project.get_absolute_url }}" class="btn btn-dark">Check it out</a>
-                  </div>              
+                  {% if project.tags.all.count > 0 %}
+                  {% for tag in project.tags.all %}
+                    <div class="tag" style="background-color: #{{ tag.color }}">
+                      <p class="individual-tag card-text">{{ tag.name }}</p>
+                    </div>
+                  {% endfor %}
+                  {% endif %}
+                  </div>           
                 </div>
                 {% if project.preview_image_link is not None %}
                 <div class="col-md-4">
@@ -21,15 +27,7 @@
                 </div>
                 {% endif %}
               </div>
-              {% if project.tags.all.count > 0 %}
-              <div class="card-text tag-section">
-                {% for tag in project.tags.all %}
-                  <div class="tag" style="background-color: #{{ tag.color }}">
-                    <p class="card-text">{{ tag.name }}</p>
-                  </div>
-                {% endfor %}
-              </div>
-              {% endif %}
+              
             </div>
           {% endfor %}
         {% else %}

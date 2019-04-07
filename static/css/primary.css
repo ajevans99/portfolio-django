@@ -25,7 +25,18 @@ a.navbar-brand {
   height: 1.75rem;
 }
 
+.individual-tag {
+  color: white;
+}
+
 .tag-section {
   padding: 0rem 1rem;
 }
 
+.video {
+  left: 0;
+  width: 100%;
+  height: auto;
+  position: relative;
+  padding-bottom: 0;
+}
